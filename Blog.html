@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="with-device-width, initial-scale=1.0">
+    <title>portfolio website design</title>
+    <link rel="stylesheet" href="pstyles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+<script src="https://kit.fontawesome.com/e339127b62.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+            <section class="sub-header">
+                <nav>
+                    <a href="portfolio.html"><img src="tech.png" alt="portfolio logo" width="100" height="100"></a><br>
+                    <div class="nav-links"id="navlinks">
+                        <i class="fa fa-times"onclick="hideMenu()"></i>
+                        <ul>
+                            <li> <a href="portfolio.html">HOME</a> </li>
+                            <li> <a href="About.html">ABOUT US</a> </li>
+                            <li> <a href="Blog.html">BLOG</a> </li>
+                            <li> <a href="contact.html">CONTACTS</a> </li>
+                        </ul>
+                    </div>
+                    <i class="fa fa-bars" onclick="showMenu()"></i>
+                </nav>
+                <h1>My Blog</h1>
+                
+            </section>
+
+
+<!-----------My Blog Page content------>
+
+<section class="blog-content">
+    <div class="row">
+        <div class="blog-left">
+            <img src="blogimg.jpg">
+            <h2>My blog</h2>
+            <p>Debugging is an essential skill for any programmer. 
+                It's the process of tracking down and fixing errors in code. 
+                This can be a daunting task, but with the right tools and techniques, 
+                it can be a lot easier than you might think.
+                In my blog post, we'll discuss some of the most common debugging tools and techniques.
+                 We'll also share some tips on how to avoid bugs in the first place.
+                </p>
+                <br>
+                <p>
+                     Common Debugging Tools<br>
+                    There are a number of different debugging tools available, but some of the most common ones include:
+                    <b>Debuggers:</b> Debuggers allow you to step through your code line by line, and examine the values of variables. This can be very helpful for finding the exact location of an error.<br>
+                    <b>Loggers:</b> Loggers allow you to write messages to a file or console. This can be helpful for tracking the execution of your code and identifying potential problems.<br>
+                    <b>tests:</b> Unit tests are a type of test that you can write to ensure that individual pieces of your code are working correctly.
+                     This can help to prevent bugs from making it into your production code.    
+                </p>
+                <br>
+                <p>
+                Debugging Techniques<br>
+                In addition to using the right tools, there are a number of different debugging techniques that you can use. Some of the most common ones include:<br>
+                <b>Printing:</b> Printing variables to the console can be a quick and easy way to see what's going on in your code.<br>
+                <b>Stepping:</b> Stepping through your code line by line can help you to identify the exact location of an error.<br>
+                <b>Debugging tools:</b> Debuggers can be used to step through your code, examine the values of variables, and set breakpoints.,<br>
+                <b>Unit tests:</b> Unit tests can be used to automate the debugging process and ensure that your code is working correctly.<br>
+                </p>
+                <br>
+                <p>
+                    Tips for Avoiding Bugs<br>
+                    The best way to avoid bugs is to write clean and well-documented code. However, even the best programmers make mistakes from time to time. Here are a few tips for avoiding bugs:<br>
+                    <b>Use a code editor with syntax highlighting:</b> This will help you to spot errors in your code more easily.<br>
+                    <b>Write unit tests:</b> Unit tests can help to prevent bugs from making it into your production code.<br>
+                    <b>Get feedback from other programmers:</b> Having someone else review your code can help you to spot errors that you might have missed.<br>
+                    <b>Use a debugger:</b> Debuggers can be a valuable tool for finding and fixing bugs.<br>
+                     </p>
+                     <br>
+                    <div class="comment-box">
+                        <h3>Leave a comment</h3>
+                        <form class="comment-form">
+                            <input type="text" placeholder="Enter Name">
+                            <input type="email" placeholder="Enter Email">
+                            <textarea rows="5" placeholder="Your Comment">
+                            </textarea>
+                            <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+                        </form>
+                    </div>
+        </div>
+        <div class="blog-right">
+            <h3>Languages</h3>
+            <div>
+                <span>Python</span>
+                <span>21</span>
+            </div>
+            <div>
+                <span>CSS</span>
+                <span>28</span>
+            </div>
+            <div>
+                <span>HTML</span>
+                <span>15</span>
+            </div>
+            <div>
+                <span>Machine Learning</span>
+                <span>15</span>
+            </div>
+            <div>
+                <span>Flutter</span>
+                <span>34</span>
+            </div>
+            <div>
+                <span>Java</span>
+                <span>42</span>
+            </div>
+            <div>
+                <span>c++</span>
+                <span>22</span>
+            </div>
+            <div>
+                <span>Javascript</span>
+                <span>30</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+                            
+ 
+                        
+<!----------footer------>
+                        <section class="footer">
+                            <h4>Social Media</h4>
+                            <p>Twitter,facebook,whatsapp,Instagram and Linkedin
+                            </p>
+                            <div class="icons">
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                            </div>
+                    </section>
+
+
+
+
+
+ <!-------------javascript for toggle Menu -------->           
+            <script>
+                
+                var navlinks = document.getElementById("navlinks");
+
+                function showMenu(){
+                    navlinks.style.right = "0";
+                }
+                function hideMenu(){
+                    navlinks.style.right = "-200px";
+                }
+
+            </script>
+
+    </body>
+</html>

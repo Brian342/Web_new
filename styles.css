@@ -1,0 +1,26 @@
+body {
+    background-color: yellowgreen;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: verdana;
+    font-size: 20px;
+}
+div#footer{
+
+        color: white;
+        text-align: center;
+
+}
+div#sidebar{
+
+    text-align: right;
+    color:aqua;
+}
+
+
