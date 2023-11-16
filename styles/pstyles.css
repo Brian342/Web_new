@@ -7,7 +7,7 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(pexels.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/pexels.png);
 
     background-position: center;
     background-size: cover;
@@ -114,8 +114,8 @@ nav .fa{
         padding: 30px;
     }
 }
-/*--------- Education level -----*/
-.edu{
+/*--------- Rank level -----*/
+.rank{
     width: 80%;
     margin: auto;
     text-align: center;
@@ -137,7 +137,7 @@ p{
     display: flex;
     justify-content: space-between;
 }
-.edu-col{
+.rank-col{
     flex-basis: 31%;
     background: #fff3f3;
     border-radius: 10px;
@@ -151,7 +151,7 @@ h3{
     font-weight: 600;
     margin: 10px 0;
 }
-.edu-col:hover{
+.rank-col:hover{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 @media(max-width:700px){
@@ -275,7 +275,7 @@ h3{
 .cta{
     margin: 100px auto;
     width: 80%;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(contact.png);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/contact.png);
     background-position: center;
     background-size: cover;
     border-radius: 10px;
@@ -314,7 +314,7 @@ h3{
 .sub-header{
     height: 50vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(about.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/about.png);
     background-position: center;
     background-size: cover;
     text-align: center;
@@ -351,37 +351,37 @@ h3{
         color: #fff;
 }
 /*---------blog content------*/
-.blog-content{
+.service-content{
         width: 80%;
         margin: auto;
         padding: 60px 0;
 }
-.blog-left{
+.service-left{
        flex-basis: 65%; 
 }
-.blog-left img{
+.service-left img{
         width: 100%;
 }
-.blog-left h2{
+.service-left h2{
     color: #222;
     font-weight: 600;
     margin: 30px 0;
 }
-.blog-left p{
+.service-left p{
         color: #999;
         padding: 0;
 }
-.blog-right{
+.service-right{
         flex-basis: 32%;
 }
-.blog-right h3{
+.service-right h3{
         background: #f44336;
         color: #fff;
         padding: 7px 0;
         font-size: 16px;
         margin-bottom: 20px;
 }
-.blog-right div{
+.service-right div{
         display: flex;
         align-items: center;
         justify-content: space-between;
