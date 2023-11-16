@@ -159,6 +159,7 @@ h3{
         flex-direction: column;
     }
 }
+/*---------achivement-------*/
 .achivement{
     width: 80%;
     margin: auto;
@@ -271,7 +272,7 @@ h3{
         margin-right: 15px;
     }
 }
-
+/*-----contact us-------*/
 .cta{
     margin: 100px auto;
     width: 80%;
@@ -292,6 +293,7 @@ h3{
             font-size: 24px;
         }
 }
+/*-------footer------*/
 .footer{
     width: 100%;
     text-align: center;
@@ -302,14 +304,14 @@ h3{
     margin-top: 20px;
     font-weight: 600;
 }
-.icons .fa{
+.icons .fa-brands{
         color: #f44336;
         margin: 0 13px;
         cursor: pointer;
         padding: 18px 0;
 }
 
-/*----------About me page -------*/
+/*----------About us page -------*/
 
 .sub-header{
     height: 50vh;
@@ -350,7 +352,7 @@ h3{
 .red-btn:hover{
         color: #fff;
 }
-/*---------blog content------*/
+/*---------service content------*/
 .service-content{
         width: 80%;
         margin: auto;
