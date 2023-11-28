@@ -41,7 +41,7 @@ nav img{
     content: '';
     width: 0%;
     height: 2px;
-    background: #f44336;
+    background: red;
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -187,7 +187,7 @@ h3{
     transition: 0.5s;
 }
 .layer:hover{
-    background: rgba(226,0,0,0.7);
+    background: rgba(30, 163, 70, 0.925)
 }
 .layer h3{
     width: 100%;
