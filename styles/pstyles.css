@@ -7,7 +7,7 @@
 .header{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/pexels.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(../images/Galaxy.jpeg);
 
     background-position: center;
     background-size: cover;
@@ -187,7 +187,7 @@ h3{
     transition: 0.5s;
 }
 .layer:hover{
-    background: rgba(30, 163, 70, 0.925)
+    background: rgba(198, 52, 26, 0.925)
 }
 .layer h3{
     width: 100%;
