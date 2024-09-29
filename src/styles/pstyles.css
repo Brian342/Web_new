@@ -205,8 +205,32 @@ h3{
     bottom: 49%;
     opacity: 1;
 }
-/*-------projects------*/
-.projects{
+/*-------portfolio------*/
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top:50px ;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.layer{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+}
+/* .projects{
     width: 80%;
     margin: auto;
     text-align: center;
@@ -231,7 +255,7 @@ h3{
         margin-top: 16px;
         margin-bottom: 15px;
         text-align: left;
-}
+} */
 
 /*----------reviews------*/
 .reviews{
