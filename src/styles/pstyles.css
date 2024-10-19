@@ -312,6 +312,11 @@ h3{
 .about-containers{
     display: flex;
 }
+@media(max-width: 700px){
+    .about-containers{
+        flex-direction: column;
+    }
+}
 
 /*----------reviews------*/
 .reviews{
