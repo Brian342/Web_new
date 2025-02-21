@@ -213,13 +213,22 @@ h3{
     text-align: center;
     padding-top: 50px;
 }
-.section__text__p1{
-    text-align: center;
+/* Container for the text and animation */
+.section-title {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
 }
-.section__text__p1{
-    font-size: 1.75rem;
+
+.section__text__p1 {
+    margin: 0; 
+    font-size: 1.75rem; 
+    font-weight: normal;
+    text-align: center;
     margin-bottom: 1rem;
 }
+
 .title {
     /* font-size: 3rem; */
     text-align: center;
@@ -320,6 +329,8 @@ h3{
     opacity: 1;
     visibility: visible;
 }
+
+
 /*---------------------Container--------------------*/
 #projects{
     position: relative;
