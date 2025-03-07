@@ -172,7 +172,16 @@
 
  <!-------------javascript for toggle Menu -------->           
             <script>
-                
+                document.querySelector('.comment-form').addEventListener('submit', function(event){
+                    const name = document.querySelector('input[name="name"]').value;
+                    const email = document.querySelector('input[name="email"]').value;
+                    const comment = document.querySelector('textarea[name="comment"]').value;
+
+                    if (!name || !email || !comment){
+                        alert('Please fill out all fields.');
+                        event.preventDefault();
+                    }
+                });
                 var navlinks = document.getElementById("navlinks");
 
                 function showMenu(){
