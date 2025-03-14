@@ -160,50 +160,64 @@ h3{
     }
 }
 /*---------achivement-------*/
-.achivement{
+.achivement {
     width: 80%;
     margin: auto;
     text-align: center;
     padding-top: 50px;
 }
-.archivement-col{
-     flex-basis: 32%;
-     border-radius: 10px;
-     margin-bottom: 30px;
-     position: relative;
-     overflow: hidden;
+
+.archivement-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
 }
-.archivement-col img{
+
+.archivement-col img {
     width: 100%;
     display: block;
+    transition: transform 0.5s ease; /* Add a smooth transition for zoom effect */
 }
-.layer{
+
+.layer {
     background: transparent;
     height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    transition: 0.5s;
+    transition: background 0.5s ease; /* Smooth transition for background color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.layer:hover{
-    background: rgba(198, 52, 26, 0.925)
+
+.layer:hover {
+    background: rgba(97, 94, 93, 0.925); /* Semi-transparent red overlay */
 }
-.layer h3{
+
+.layer h3 {
     width: 100%;
     font-weight: 500;
-    color: #fff;
+    color: #f0f0f0;
     font-size: 26px;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%);
-    position: absolute;
+    text-align: center;
     opacity: 0;
-    transition: 0.5s;
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition for text */
+    transform: translateY(20px); /* Start text slightly below */
 }
-.layer:hover h3{
-    bottom: 49%;
-    opacity: 1;
+
+.layer:hover h3 {
+    opacity: 1; /* Make text visible on hover */
+    transform: translateY(0); /* Move text to its original position */
+    color: #f0f0f0;
+}
+
+/* Optional: Add a zoom effect on hover */
+.archivement-col:hover img {
+    transform: scale(1.1);
 }
 
 /*-------portfolio------*/
@@ -577,4 +591,38 @@ h3{
     height: 1px;
     background: #ccc; /* Light gray color */
     margin: 40px 0; /* Add space above and below the line */
+}
+/*Modal section*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark overlay */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
 }
