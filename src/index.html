@@ -104,8 +104,8 @@
             <span class="close">&times;</span> <!-- Close button -->
             <h2>Certificates</h2>
             <div class="certificate-images">
-                <img src="/Users/briankimanzi/Documents/Brian/Data_Analytics_Essentials_Badge20240614-7-oxpjrd.pdf" alt="Certificate 1">
-                <img src="path/to/certificate2.jpg" alt="Certificate 2">
+                <img src="https://github.com/Brian342/Certificates/raw/main/Data%20Analytics%20Bootcamp%20Certification%20of%20Completion%20(1).png" alt="Certificate 1">
+                <img src="https://github.com/Brian342/Certificates/blob/main/Data_Analytics_Essentials_Badge20240614-7-oxpjrd.pdf" alt="Certificate 2">
                 <!-- Add more certificate images as needed -->
             </div>
         </div>
@@ -283,6 +283,33 @@
                 function hideMenu(){
                     navlinks.style.right = "-200px";
                 }
+
+                // Get the modal
+                const modal = document.getElementById("certificateModal");
+
+                // Get the button/link that opens the modal
+                const certificateLink = document.querySelector(".archivement-col a");
+
+                // Get the <span> element that closes the modal
+                const closeBtn = document.querySelector(".close");
+
+                // When the user clicks the link, open the modal
+                certificateLink.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent default link behavior
+    modal.style.display = "block";
+});
+
+                // When the user clicks on <span> (x), close the modal
+                closeBtn.addEventListener("click", () => {
+                modal.style.display = "none";
+                });
+
+                // When the user clicks anywhere outside the modal, close it
+                window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
 
             </script>
 
