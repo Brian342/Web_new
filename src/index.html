@@ -98,18 +98,18 @@
                 </div>
             </section>
         
-               <!-- Modal Structure -->
-    <div id="certificateModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span> <!-- Close button -->
-            <h2>Certificates</h2>
-            <div class="certificate-images">
-                <img src="https://github.com/Brian342/Certificates/raw/main/Data%20Analytics%20Bootcamp%20Certification%20of%20Completion%20(1).png" alt="Certificate 1">
-                <img src="https://github.com/Brian342/Certificates/blob/main/Data_Analytics_Essentials_Badge20240614-7-oxpjrd.pdf" alt="Certificate 2">
-                <!-- Add more certificate images as needed -->
+            <div id="certificateModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <div class="certificate-images">
+                    <iframe src="https://drive.google.com/file/d/1U4fmVWJNVMhP63mFlLK6Vl39wcU2UfCr/preview" width="100%" height="500px"></iframe>
+                    <iframe src="https://drive.google.com/file/d/1053AyrfDcYR81NzuqKmUovexZf8EDYaw/preview" width="100%" height="500px"></iframe>
+                </div>
             </div>
         </div>
-    </div>
+    
+
+    
 
             
 <!---------projects------------> 
@@ -274,43 +274,39 @@
 
  <!-------------javascript for toggle Menu -------->           
             <script>
-                
-                var navlinks = document.getElementById("navlinks");
+      // Get references to the modal and links
+      const modal = document.getElementById("certificateModal");
+        const openModalLink = document.getElementById("openModalLink");
+        const closeModalBtn = document.getElementById("closeModal");
 
-                function showMenu(){
-                    navlinks.style.right = "0";
-                }
-                function hideMenu(){
-                    navlinks.style.right = "-200px";
-                }
+        // Function to open the modal
+        openModalLink.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevent the link from navigating
+            modal.style.display = "block";
+        });
 
-                // Get the modal
-                const modal = document.getElementById("certificateModal");
+        // Function to close the modal
+        closeModalBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
 
-                // Get the button/link that opens the modal
-                const certificateLink = document.querySelector(".archivement-col a");
-
-                // Get the <span> element that closes the modal
-                const closeBtn = document.querySelector(".close");
-
-                // When the user clicks the link, open the modal
-                certificateLink.addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent default link behavior
-    modal.style.display = "block";
-});
-
-                // When the user clicks on <span> (x), close the modal
-                closeBtn.addEventListener("click", () => {
+        // Close the modal when clicking outside of it
+        window.addEventListener("click", function (event) {
+            if (event.target === modal) {
                 modal.style.display = "none";
-                });
+            }
+        });
 
-                // When the user clicks anywhere outside the modal, close it
-                window.addEventListener("click", (event) => {
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-});
 
+
+var navlinks = document.getElementById("navlinks");
+
+function showMenu(){
+    navlinks.style.right = "0";
+}
+function hideMenu(){
+    navlinks.style.right = "-200px";
+}
             </script>
 
     </body>
