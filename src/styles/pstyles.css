@@ -644,3 +644,93 @@ h3{
 .certificate-images iframe:hover {
     border-color: #000;
 }
+
+/*---------------- Certificate Section ----------------*/
+
+body {
+    font-family: 'Playfair Display', serif;
+    margin: 0;
+    background-color: #f7f9fc;
+}
+
+.sub-header {
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.sub-header h1 {
+    font-size: 42px;
+    margin: 0;
+}
+
+.certificates-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.certificates-section h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.cert-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+
+.cert-card:hover {
+    transform: scale(1.03);
+}
+
+.cert-card img {
+    width: 100%;
+    height: auto;
+}
+
+.cert-card .cert-content {
+    padding: 20px;
+}
+
+.cert-card h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+.cert-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+.footer {
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.icons i {
+    margin: 0 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .sub-header h1 {
+        font-size: 28px;
+    }
+
+    .cert-card h3 {
+        font-size: 18px;
+    }
+}
