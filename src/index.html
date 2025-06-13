@@ -290,9 +290,19 @@
 
 
  <!-------------javascript for toggle Menu -------->           
-            <script>
+        <script>
       // Get references to the modal and links
-      const modal = document.getElementById("certificateModal");
+
+         var navlinks = document.getElementById("navlinks");
+
+         function showMenu(){
+            navlinks.style.right = "0";
+        }
+        function hideMenu(){
+            navlinks.style.right = "-200px";
+        }
+        
+        const modal = document.getElementById("certificateModal");
         const openModalLink = document.getElementById("openModalLink");
         const closeModalBtn = document.getElementById("closeModal");
 
@@ -314,19 +324,6 @@
             }
 
         });
-
-
-
-var navlinks = document.getElementById("navlinks");
-
-function showMenu(){
-    navlinks.style.right = "0";
-}
-function hideMenu(){
-    navlinks.style.right = "-200px";
-}
-
-</script>
-
+     </script>
     </body>
 </html>
