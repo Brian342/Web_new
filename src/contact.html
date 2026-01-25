@@ -67,14 +67,15 @@
         </div>
     </div>
 </section>
-<div class="comment-box">
+<div class="comment-box" id="comment-form">
     <h3>Leave a comment</h3>
-    <form class="comment-form" action="send_email.php" method="POST">
+    <form class="comment-form" id="contactForm">
         <input type="text" name="name" placeholder="Enter Name" required>
         <input type="email" name="email" placeholder="Enter Email" required>
         <textarea rows="5" name="comment" placeholder="Talk To Brian" required></textarea>
-        <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+        <button type="button" class="hero-btn red-btn" id="submitBtn">POST COMMENT</button>
     </form>
+    <div id="form-feedback" style="margin-top: 15px; padding: 10px; display: none; border-radius: 5px; font-weight: bold;"></div>
 </div>
                             
  
@@ -116,6 +117,62 @@
                 function hideMenu(){
                     navlinks.style.right = "-200px";
                 }
+
+                // ===== CONTACT FORM SUBMISSION =====
+                const contactForm = document.getElementById('contactForm');
+                const submitBtn = document.getElementById('submitBtn');
+                const feedback = document.getElementById('form-feedback');
+
+                submitBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Validate form
+                    if (!contactForm.checkValidity()) {
+                        contactForm.reportValidity();
+                        return;
+                    }
+                    
+                    const name = document.querySelector('input[name="name"]').value;
+                    const email = document.querySelector('input[name="email"]').value;
+                    const comment = document.querySelector('textarea[name="comment"]').value;
+                    
+                    // Create FormData and send to PHP
+                    const formData = new FormData();
+                    formData.append('name', name);
+                    formData.append('email', email);
+                    formData.append('comment', comment);
+                    
+                    fetch('send_email.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(data => {
+                        // Show success message
+                        feedback.textContent = 'Thank you! Your message has been sent. I will get back to you soon!';
+                        feedback.style.display = 'block';
+                        feedback.style.backgroundColor = '#d4edda';
+                        feedback.style.color = '#155724';
+                        feedback.style.borderLeft = '4px solid #28a745';
+                        
+                        // Reset form
+                        contactForm.reset();
+                        
+                        // Hide message after 5 seconds
+                        setTimeout(() => {
+                            feedback.style.display = 'none';
+                        }, 5000);
+                    })
+                    .catch(error => {
+                        // Show error message
+                        feedback.textContent = '✗ Error sending message. Please try again.';
+                        feedback.style.display = 'block';
+                        feedback.style.backgroundColor = '#f8d7da';
+                        feedback.style.color = '#721c24';
+                        feedback.style.borderLeft = '4px solid #f5c6cb';
+                        console.error('Error:', error);
+                    });
+                });
 
             </script>
 

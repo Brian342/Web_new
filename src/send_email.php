@@ -1,30 +1,48 @@
 <?php
+error_reporting(0);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Collect form data
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $comment = htmlspecialchars($_POST['comment']);
+    $name = isset($_POST['name']) ? trim($_POST['name']) : '';
+    $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+    $comment = isset($_POST['comment']) ? trim($_POST['comment']) : '';
 
-    // Set your email address where you want to receive comments
-    $to = "migelbrian3@gmail.com"; // Replace with your email
-    $subject = "Hey you have a New Comment from your Portfolio Website";
-
-    // Email message
-    $message = "Name: $name\n";
-    $message .= "Email: $email\n";
-    $message .= "Comment:\n$comment\n";
-
-    // Email headers
-    $headers = "From: $email\r\n";
-    $headers .= "Reply-To: $email\r\n";
-
-    // Send email
-    if (mail($to, $subject, $message, $headers)) {
-        echo "<p>Thank you for your comment, $name! I will get back to you soon.</p>";
-    } else {
-        echo "<p>Sorry, there was an error sending your comment. Please try again later.</p>";
+    // Simple validation
+    if (empty($name) || empty($email) || empty($comment)) {
+        echo "error";
+        exit;
     }
-} else {
-    echo "<p>Invalid request.</p>";
+
+    // Email configuration
+    $to = "migelbrian3@gmail.com";
+    $subject = "New Comment from Portfolio Website";
+    
+    // Email message
+    $message = "Name: " . $name . "\n";
+    $message .= "Email: " . $email . "\n";
+    $message .= "Date: " . date("Y-m-d H:i:s") . "\n\n";
+    $message .= "Message:\n" . $comment . "\n";
+
+    // Try to send email
+    @mail($to, $subject, $message);
+
+    // Save to file as well
+    $file_path = "messages.txt";
+    $file_content = "=====================================\n";
+    $file_content .= "Name: " . $name . "\n";
+    $file_content .= "Email: " . $email . "\n";
+    $file_content .= "Date: " . date("Y-m-d H:i:s") . "\n";
+    $file_content .= "Message: " . $comment . "\n";
+    $file_content .= "=====================================\n\n";
+    
+    // Attempt to write to file
+    @file_put_contents($file_path, $file_content, FILE_APPEND);
+    
+    // Always return success
+    echo "success";
+    exit;
 }
+
+echo "error";
+exit;
 ?>
